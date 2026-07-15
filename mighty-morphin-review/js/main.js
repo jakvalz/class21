@@ -20,36 +20,30 @@ function absNum(a,b,c,d,e) {
 
 // Create a function that takes in 3 numbers. Console log lowest and highest values. Call the function.
 function minAndMax(a,b,c) {
-    return `lowest value is ${Math.min(a,b,c)}. highest value is ${Math.max(a,b,c)}`
+    return `Max number: ${Math.max(a,b,c)}. Min number: ${Math.min(a,b,c)}`
 }
-
 // console.log(minAndMax(23,4,2))
 
 // *Conditionals*
 //Create a function that returns heads or tails randomly and as fairly as possible. Call the function.
-// function headsOrTails() {
-//     let ranNum = Math.random()
-//     if(ranNum < .5) {
-//         return 'heads'
-//     } else {
-//         return 'tails'
-//     }
-//     return result
+// function headsTails() {
+//     let randoNum = Math.floor(Math.random() * 2)
+//     return randoNum > 0 ? 'heads' : 'tails'
 // }
-
-const headsOrTails = () => Math.random() < .5 ? 'heads' : 'tails'
-
-// console.log(headsOrTails())
+const headsTails = () => Math.floor(Math.random() * 2) > 0 ? 'heads' : 'tails'
+console.log(headsTails())
 
 //*Loops*
 //Create a function that takes in a number. 
 // Console log the result of heads or tails using the previous function x times 
 // where x is the number passed into the function. Call the function.
-function flipFlipZehCoin(n) {
-    for(let i = 1; i <= n; i++){
-        let result = headsOrTails()
+let headsCount = 0
+let tailsCount = 0
+
+function gameResults(n) {
+    for(let i = 0; i < n; i++) {
+        let result = headsTails()
         console.log(result)
     }
 }
-
-flipFlipZehCoin(1)
+console.log(gameResults(10))

@@ -1,19 +1,25 @@
 //Create a stopwatch object that has four properties and three methods
 const stopwatch = {}
 
-stopwatch.brand = 'fitbit'
-stopwatch.color = 'white'
-stopwatch.shape = 'round'
-stopwatch.size = 'shmaledium'
+stopwatch.size = 'medium';
+stopwatch.brand = 'Goober';
+stopwatch.color = 'purple';
+stopwatch.shape = 'round';
 
-stopwatch.start = function (){
-    console.log('STARTIIIIIIIIIIIING')
-}
-stopwatch.stop = function (){
-    console.log('STOPPPPPPPIIIIIIING')
-}
-stopwatch.sayBrand = function(){
-    console.log(stopwatch.brand)
-}
+stopwatch.timeOut = function() {
+    console.log('Time is up!')
+};
 
-console.log(stopwatch.sayBrand())
+stopwatch.tellTime = function(time) {
+    console.log(`The time is ${time}`)
+};
+
+stopwatch.start = function() {
+    console.log('startingggg')
+};
+
+stopwatch.stop = function() {
+    console.log('STOP!')
+};
+
+console.log(stopwatch)
